@@ -11,8 +11,8 @@ public class Main {
 		employes[1] = Ingenieur2;
 		employes[2] = commercial1;
 		employes[3] = commercial2;
-		Projet projet1 = new Projet("P1", "");
-		Projet projet2 = new Projet("P2", "");
+		Projet projet1 = new Projet("P1", "projet1");
+		Projet projet2 = new Projet("P2", "projet2");
 		Ingenieur2.setSuperieur(Ingenieur1);
 		commercial1.setSuperieur(Ingenieur1);
 		commercial2.setSuperieur(commercial1);
