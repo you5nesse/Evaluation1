@@ -20,6 +20,7 @@ public abstract class Employe {
 	public abstract double calculerCout(int nbJours);
 
 	public void afficherDetails() {
+		System.out.println("----Details de l'employe : ");
 		System.out.println("matricule :" + matricule);
 		System.out.println("nom :" + nom);
 		System.out.println("tarifJournalier :" + tarifJournalier);
