@@ -12,7 +12,7 @@ public abstract class Employe {
 		this.nom = nom;
 		this.tarifJournalier = tarifJournalier;
 	}
-
+   
 	public String getMatricule() {
 		return matricule;
 	}
@@ -20,9 +20,9 @@ public abstract class Employe {
 	public abstract double calculerCout(int nbJours);
 
 	public void afficherDetails() {
-		System.out.println("matricule" + matricule);
-		System.out.println("nom" + nom);
-		System.out.println("tarifJournalier" + tarifJournalier);
+		System.out.println("matricule :" + matricule);
+		System.out.println("nom :" + nom);
+		System.out.println("tarifJournalier :" + tarifJournalier);
 	}
 
 	public Employe getSuperieur() {
