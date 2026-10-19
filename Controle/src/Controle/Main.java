@@ -6,20 +6,23 @@ public class Main {
 		Employe Ingenieur2 = new Ingenieur("B7899", "amin", 350, 2);
 		Employe commercial1 = new Commercial("C7829", "hamza", 300, 0.10);
 		Employe commercial2 = new Commercial("D9726", "younesse", 400, 0.15);
-		Employe[] employes = new Employe[5];
+		Employe[] employes = new Employe[4];
 		employes[0] = Ingenieur1;
 		employes[1] = Ingenieur2;
 		employes[2] = commercial1;
 		employes[3] = commercial2;
-		Projet projet1 = new Projet("P1", "projet1");
-		Projet projet2 = new Projet("P2", "projet2");
+		Projet projet1 = new Projet("P1", "");
+		Projet projet2 = new Projet("P2", "");
 		Ingenieur2.setSuperieur(Ingenieur1);
 		commercial1.setSuperieur(Ingenieur1);
 		commercial2.setSuperieur(commercial1);
 		for (Employe e : employes) {
 			e.afficherDetails();
-			/*System.out.println(" leur supérieur " );
-			e.getSuperieur().nom;*/
+			if (e.getSuperieur() != null) {
+				System.out.println("leur supérieur : " + e.getSuperieur().getNom());
+
+			} else
+				System.out.println("aucune  supérieur ");
 		}
 		Mission m1 = new Mission(4, commercial1, projet1);
 		Mission m2 = new Mission(2, commercial2, projet1);
@@ -38,7 +41,7 @@ public class Main {
 		System.out.println("le montant total de toutes les missions : " + totale);
 		int nbemployes = 0;
 		for (Employe e : employes) {
-			if (e.getSuperieur().nom.equals(Ingenieur1.nom)) {
+			if (e.getSuperieur() != null && e.getSuperieur().nom.equals(Ingenieur1.nom)) {
 				nbemployes++;
 			}
 
