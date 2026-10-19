@@ -18,7 +18,8 @@ public class Main {
 		commercial2.setSuperieur(commercial1);
 		for (Employe e : employes) {
 			e.afficherDetails();
-			System.out.println(" leur supérieur " + e.getSuperieur().nom);
+			/*System.out.println(" leur supérieur " );
+			e.getSuperieur().nom;*/
 		}
 		Mission m1 = new Mission(4, commercial1, projet1);
 		Mission m2 = new Mission(2, commercial2, projet1);
